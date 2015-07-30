@@ -4,12 +4,7 @@
 
 var phonecatApp = angular.module('phonecatApp', [
   'ngRoute',
-  'phonecatAnimations',
   'ngResource',
-
-  'phonecatControllers',
-  'phonecatFilters',
-  'phonecatServices',
   // Our app/modules our app/modules
   'home',
   'admin',
@@ -48,17 +43,10 @@ phonecatApp.config(['$routeProvider',
          when('/shop/profile/edit',{
           templateUrl: 'app/modules/admin/views/zarin-shop-admin-edit-profile.html'
         }).
+        when('/home/listener',{
+            templateUrl: 'app/modules/admin/views/zarin-services-page.html'
+        }).
 
-
-
-      when('/phones', {
-        templateUrl: 'app/partials/phone-list.html',
-        controller: 'PhoneListCtrl'
-      }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
-      }).
       // Our roots
       when('/home', {
         templateUrl: 'app/modules/home/views/main.html'
@@ -82,6 +70,6 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'app/modules/goods/views/nazar-login-and-registration-page.html'
       }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/home'
       });
   }]);

@@ -82,3 +82,23 @@ method = POST -- pagination with sorting
 3. http://localhost:8080/Practice/#/character - Characteristic of chosen product
 4. http://localhost:8080/Practice/#/user/backet - User's cart (User links on the sidebar)
 5. http://localhost:8080/Practice/#/admin/users - Admin's Page (Admin links on the sidebar)
+
+#Install Node.js
+Node is a requirement for bower package manager.
+You can download a Node.js installer for your operating system from http://nodejs.org/download/.
+Check the version of Node.js that you have installed by running the following command in console:
+```sh
+ node --version
+```
+
+#Install Bower
+Bower is used for bootstrapping application with needed libraries like Angular.js, jQuery etc.
+```sh
+ npm install -g bower
+```
+
+#Browse required libraries
+In your console go to the {system path}/sales-if-ua/src/main/webapp/app and type following comand:
+```sh
+ bower install
+```
