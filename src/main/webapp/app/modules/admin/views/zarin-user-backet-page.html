@@ -25,11 +25,19 @@
 			</ul>
 		</div>
 		<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-3 col-lg-9 col-sm-8 col-xs-7 col-md-9 table-min">
+<<<<<<< HEAD
 			<h2>Backet</h2>
 			<p>The table consist of all the products you added to bucket:</p>
 			<table class="table table-condensed">
 				<thead>
 				<tr>
+=======
+			<h2 class="textColor"> Backet</h2>
+			<p class="textColor">The table consist of all the products you added to bucket:</p>
+			<table class="table table-condensed">
+				<thead>
+				<tr class="textColor">
+>>>>>>> upstream/master
 					<th>№</th>
 					<th>Product</th>
 					<th>Model</th>
@@ -39,13 +47,22 @@
 				</tr>
 				</thead>
 				<tbody>
+<<<<<<< HEAD
 				<tr ng-repeat="product in products">
+=======
+				<tr class="textColor" ng-repeat="product in products">
+>>>>>>> upstream/master
 					<td>{{$index+1}}</td>
 					<td>{{product.name}}</td>
 					<td>{{product.model}}</td>
-					<td><input ng-model="product.amount" type="text" style="width :35px" placeholder={{product.amount}}></td>
+					<td><input class="BtnTextColor ButtonColor" ng-model="product.amount" type="text" style="width :35px" placeholder={{product.amount}}></td>
 					<td>{{product.price*product.amount}}</td>
+<<<<<<< HEAD
 					<td> <a href="#/character"><button class="btn btn-default fa fa-plus-square adm-buttonStileBlue" type="button" style="width:80px">         More         </button></a>    <button ng-click="deleteProduct($index)" class="btn btn-default fa fa-trash buttonStileBlue" type="button" style="width:80px">  Delete</button> </td>
+=======
+					<td> <a href="#/character"><button class="btn BtnTextColor ButtonColor textColor fa fa-plus-square" type="button" style="width:80px">         More         </button></a>
+					<button ng-click="deleteProduct($index)" class="btn  fa fa-trash BtnTextColor ButtonColor textColor" type="button" style="width:80px">  Delete</button> </td>
+>>>>>>> upstream/master
 				</tr>
 				</tbody>
 			</table>
@@ -55,7 +72,11 @@
 		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
 		</div>
 		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+<<<<<<< HEAD
 			<button class="btn btn-default buttonStileBlue" type="button"><span class="fa fa-cart-plus" aria-hidden="true"></span>  Order</button>
+=======
+			<button class="btn BtnTextColor ButtonColor textColor" type="button"><span class="fa fa-cart-plus" aria-hidden="true"></span>  Order</button>
+>>>>>>> upstream/master
 		</div>
 	</div>
 </div>

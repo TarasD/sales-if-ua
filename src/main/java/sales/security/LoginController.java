@@ -1,5 +1,6 @@
 package sales.security;
 
+<<<<<<< HEAD
 import org.springframework.http.MediaType;
 import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.stereotype.Controller;
@@ -54,4 +55,10 @@ public class LoginController {
         model.addAttribute("message", sessionRegistry.getAllPrincipals().size());
         return "temp";
     }
+=======
+/**
+ * Created by taras on 29.07.15.
+ */
+public class LoginController {
+>>>>>>> upstream/master
 }

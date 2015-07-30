@@ -4,9 +4,9 @@ home.controller('MainCtrl', ['$scope', '$http', function($scope, $http){
 		$http.get('app/modules/home/json/categories.json').then(function(response){
 			$scope.categories = response.data;
 		});
-	$http.get('http://localhost:8080/Practice/goods/').then(function(response){
-		$scope.goods = response.data;
-	});
+	//$http.get('http://localhost:8080/Practice/goods/').then(function(response){
+	//	$scope.goods = response.data;
+	//});
 
 		$scope.link = "../images/clothing.jpg";
 

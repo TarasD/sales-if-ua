@@ -75,6 +75,14 @@ method = POST -- pagination with sorting
 7. http://localhost:8080/Practice/client/page?page=%page%&amount=%amount%
    method = GET - get client list on page=%page% and with %amount% clients on page
 
+#Links for using: [COMMENTS]
+
+1. http://localhost:8080/Practice/comment/add method = POST - save Comment
+2. http://localhost:8080/Practice/comment/all?goodId=%goodId% method = GET - get all comments
+   to Good with goodId = %goodId%
+3. http://localhost:8080/Practice/comment/remove?commentId=%commentId% method = DELETE -
+   remove Comment with commentId = %commentId%
+
 
 #Links for site pages:
 1. http://localhost:8080/Practice/#/home  - Main Page
