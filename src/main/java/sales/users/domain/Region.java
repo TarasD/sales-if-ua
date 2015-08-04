@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.util.List;
+import sales.roles.domain.Role;
 
 /**
  * Created by taras on 04.08.15.
