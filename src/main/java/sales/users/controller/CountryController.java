@@ -65,6 +65,7 @@ public class CountryController {
             method = RequestMethod.GET,
             value = "/country/{id}/region",
             produces = "application/json")
+
     public List<Region> getAllRegions(@PathVariable("id") Long id) {
         logger.debug("Get list of regions");
         return regionService.getAll(countryService.getOne(id));
