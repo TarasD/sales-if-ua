@@ -25,15 +25,7 @@ public class User implements Serializable{
     @JsonProperty
     private Long id;
 
-<<<<<<< HEAD
     @Column(name = "password", columnDefinition = "VARCHAR(100)")
-=======
-<<<<<<< HEAD
-    @Column(name = "password", columnDefinition = "VARCHAR(100) COLLATE utf8_general_ci")
-=======
-    @Column(name = "password", columnDefinition = "VARCHAR(100)")
->>>>>>> modificated users, added address domain
->>>>>>> modificated users, added address domain
     @JsonProperty
     private String password;
 
@@ -97,7 +89,6 @@ public class User implements Serializable{
         this.role = role;
     }
 
-<<<<<<< HEAD
     public Long getId() {
         return id;
     }
@@ -106,8 +97,6 @@ public class User implements Serializable{
         this.id = id;
     }
 
-=======
->>>>>>> modificated users, added address domain
     public String getPassword() {
         return password;
     }
