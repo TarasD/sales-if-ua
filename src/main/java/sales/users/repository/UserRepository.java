@@ -25,6 +25,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 =======
 >>>>>>> modificated users, added address domain
 
+    List<User> findByCreationDateAfter(String creationDate);
+
     Page<User> findByRoleAndFirstName(Role role, String firstName, Pageable pageable);
 
     Page<User> findByRoleAndLastName(Role role, String lastName, Pageable pageable);
