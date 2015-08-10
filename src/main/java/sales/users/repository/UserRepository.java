@@ -19,11 +19,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findByRoleAndId(Role role, Long id);
 
     User findByEmail(String email);
-<<<<<<< HEAD
-
-    List<User> findByCreationDateAfter(String creationDate);
-=======
->>>>>>> modificated users, added address domain
 
     List<User> findByCreationDateAfter(String creationDate);
 
