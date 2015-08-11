@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by taras on 04.08.15.
  */
-@Service("regionServ")
+@Service("regionService")
 public class RegionServiceImpl implements RegionService{
     final static Logger logger = LoggerFactory.getLogger(RegionServiceImpl.class);
 
