@@ -45,6 +45,15 @@ public class UserController {
 
     @RequestMapping(
             method = RequestMethod.GET,
+            value = "/{id}",
+            produces = "application/json")
+    public User getUser(@PathVariable("id") Long id) {
+        logger.info("Get client by id");
+        return userService.getById(id);
+    }
+
+    @RequestMapping(
+            method = RequestMethod.GET,
             value = "/shop",
             produces = "application/json")
     public List<User> getAllShops(@RequestParam(required = false, value ="page", defaultValue = "0") int page,
