@@ -21,6 +21,8 @@ public interface StorageService {
 
     public List<Storage> getStoragesByGood(Good good);
 
+    public Storage getStorageByLeastPriceOfGood(Good good);
+
     public List<Storage> getStoragesByUser(User user);
 
 }

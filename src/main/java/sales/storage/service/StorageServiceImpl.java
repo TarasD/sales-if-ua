@@ -42,7 +42,12 @@ public class StorageServiceImpl implements StorageService{
 
     @Override
     public List<Storage> getStoragesByGood(Good good) {
-        return repository.findByGood(good);
+        return repository.findByGoodOrderByPriceAsc(good);
+    }
+
+    @Override
+    public Storage getStorageByLeastPriceOfGood(Good good) {
+        return repository.findByGoodOrderByPriceAsc(good).get(0);
     }
 
     @Override

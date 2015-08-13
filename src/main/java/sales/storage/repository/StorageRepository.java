@@ -16,7 +16,7 @@ public interface StorageRepository extends JpaRepository<Storage, Long> {
 
     public void removeById(long id);
 
-    public List<Storage> findByGood(Good good);
+    public List<Storage> findByGoodOrderByPriceAsc(Good good);
 
     public List<Storage> findByUser(User user);
 
