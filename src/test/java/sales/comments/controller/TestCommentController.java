@@ -16,6 +16,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import sales.comments.domain.Comment;
+import sales.users.service.UserService;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -34,6 +35,9 @@ public class TestCommentController extends AbstractTestNGSpringContextTests {
     @Autowired
     private WebApplicationContext wac;
 
+    @Autowired
+    UserService userService;
+
     private MockMvc mockMvc;
 
     private Comment comment;
@@ -50,7 +54,7 @@ public class TestCommentController extends AbstractTestNGSpringContextTests {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
 
         this.comment = new Comment();
-        this.comment.setUserId(USER_ID);
+        this.comment.setUser(userService.getById(USER_ID));
         this.comment.setGoodId(GOOD_ID);
         this.comment.setCommentText(COMMENT_TEXT);
         this.comment.setRating(RATING);

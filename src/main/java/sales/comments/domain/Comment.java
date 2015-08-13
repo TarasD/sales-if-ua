@@ -3,6 +3,7 @@ package sales.comments.domain;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.wordnik.swagger.annotations.ApiModel;
+import sales.users.domain.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,9 +21,10 @@ public class Comment implements Serializable {
     @JsonProperty
     private Long id;
 
-    @Column(name = "userId")
+    @ManyToOne(targetEntity = User.class)
+    @JoinColumn(name = "user", referencedColumnName = "id")
     @JsonProperty
-    private Long userId;
+    private User user;
 
     @Column(name = "goodId")
     @JsonProperty
@@ -50,9 +52,9 @@ public class Comment implements Serializable {
     public Comment() {
     }
 
-    public Comment(Long id, Long userId, int goodId, double rating, String commentText, Date creationDate) {
+    public Comment(Long id, User user, int goodId, double rating, String commentText, Date creationDate) {
         this.id = id;
-        this.userId = userId;
+        this.user = user;
         this.goodId = goodId;
         this.rating = rating;
         this.commentText = commentText;
@@ -67,12 +69,12 @@ public class Comment implements Serializable {
         this.id = id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getGoodId() {

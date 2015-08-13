@@ -117,8 +117,8 @@ public class UserController {
 
 
     @RequestMapping(
-            method = RequestMethod.GET,
-            value = "/delete/{id}",
+            method = RequestMethod.DELETE,
+            value = "/{id}",
             produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public void deleteUser(@PathVariable("id") Long id) {
